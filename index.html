@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>rkz</title>
+  <meta name="description" content="rkz — blog personal">
+  <meta name="theme-color" content="#000000">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="stage">
+
+    <!-- Línea de estado superior (decorativa) -->
+    <p class="status" aria-hidden="true">
+      <span class="status__item status__item--1">MR BIOS (TM)</span>
+      <span class="status__item status__item--2">COPYRIGHT RKZ(C) 2025</span>
+      <span class="status__item status__item--3">RESEARCH</span>
+      <span class="status__item status__item--4">VER V0.01</span>
+      <span class="status__item status__item--5">PORT......3</span>
+    </p>
+
+    <!-- Barra de navegación superior (la navegación se activa en la etapa 4) -->
+    <nav class="topbar frame" aria-label="Navegación principal">
+      <ul class="topbar__list">
+        <li class="topbar__item topbar__item--1"><button type="button" class="tab" aria-current="page">SUMMARY</button></li>
+        <li class="topbar__item topbar__item--2"><button type="button" class="tab">FIXED</button></li>
+        <li class="topbar__item topbar__item--3"><button type="button" class="tab">BOOT</button></li>
+        <li class="topbar__item topbar__item--4"><button type="button" class="tab">SEQ</button></li>
+        <li class="topbar__item topbar__item--5"><button type="button" class="tab">MORE+</button></li>
+      </ul>
+    </nav>
+
+    <!-- Panel izquierdo: contenido / blog (contenido provisional) -->
+    <main class="panel panel--content frame" id="contenido">
+      <h1 class="sr-only">rkz</h1>
+      <div class="screen" tabindex="0" role="region" aria-label="Contenido principal">
+
+        <pre class="term">@ECHO OFF
+MODE CON: COLS=80 LINES=30
+COLOR 0A
+
+:: SETUP - VISTA SUMMARY (PROVISIONAL)
+ECHO ====================================
+ECHO RKZ MODULAR BIOS - SYSTEM UTILITY
+ECHO CONTENIDO DE DEMOSTRACION - ETAPA 2
+ECHO ====================================</pre>
+
+        <pre class="art art--title" aria-hidden="true"> _____     _  __    ______
+|  __ \   | |/ /   |___  /
+| |__) |  | ' /       / / 
+|  _  /   |  &lt;       / /  
+| | \ \   | . \     / /__ 
+|_|  \_\  |_|\_\   /_____|</pre>
+
+        <pre class="term">:MENU
+ECHO RKZ SETUP UTILITY - VERSION 0.1
+ECHO.
+ECHO [1] INDICE DE ENTRADAS
+ECHO [2] CATEGORIAS
+ECHO [3] ARCHIVO
+ECHO [4] ACERCA DE
+ECHO [5] ENLACES
+ECHO [6] ESTADO DEL SISTEMA
+ECHO [7] SALIR
+SET /P CHOICE=ENTER YOUR SELECTION (1-7): <span class="cursor" aria-hidden="true"></span></pre>
+
+        <article class="entry">
+          <h2 class="entry__title">Título de ejemplo</h2>
+          <p class="entry__meta">FECHA: 0000-00-00 | CATEGORIA: DEMO</p>
+          <p>Este párrafo es solo una prueba de lectura. Sirve para comprobar el tamaño del texto, el interlineado y el ancho de línea dentro del panel izquierdo. Será reemplazado cuando exista el sistema de publicaciones.</p>
+          <p>Una segunda línea de prueba permite verificar cómo se comporta el ajuste de texto cuando el panel se estrecha en tabletas y móviles.</p>
+        </article>
+
+      </div>
+    </main>
+
+    <!-- Panel derecho: imagen permanente (no cambia con la navegación) -->
+    <aside class="panel panel--image frame" aria-label="Imagen de referencia">
+      <img class="visual" src="assets/images/visual-reference.png" width="337" height="477" alt="Retrato en arte ASCII verde sobre fondo negro">
+    </aside>
+
+    <!-- Panel inferior: información del sistema (decorativo) -->
+    <footer class="sysinfo" aria-hidden="true">
+
+      <pre class="sysinfo__console">@ECHO OFF
+TITLE RKZ BIOS
+MODE CON: COLS=80 LINES=30
+COLOR 0A
+CLS
+
+:: BIOS BOOT SCREEN
+ECHO
+ECHO --------------------------------------------------
+ECHO | MEMORY TEST ............................... OK |
+ECHO | VIDEO ADAPTER ............................. OK |
+ECHO | KEYBOARD .................................. OK |
+ECHO | STORAGE ................................... OK |
+ECHO | TEXTO PROVISIONAL - ETAPA 2 ............... -- |
+ECHO | RKZ READY ................................. OK |
+ECHO --------------------------------------------------
+ECHO</pre>
+
+      <div class="banks">
+        <div class="banks__row banks__row--1">
+          <span class="banks__name">BANK 1</span>
+          <span class="banks__tag banks__tag--1">RKZ ONLINE</span>
+          <span class="banks__tag banks__tag--2">RKZ ONLINE</span>
+          <span class="banks__tag banks__tag--3">RKZ ONLINE</span>
+        </div>
+        <div class="banks__row banks__row--2">
+          <span class="banks__name">BANK 2</span>
+          <span class="banks__tag banks__tag--1">RKZ ONLINE</span>
+          <span class="banks__tag banks__tag--2">RKZ ONLINE</span>
+          <span class="banks__tag banks__tag--3">RKZ ONLINE</span>
+        </div>
+      </div>
+
+      <pre class="sysinfo__log">ECHO        BANK 0: 32GB DDR5 [OK]
+ECHO        BANK 1: 32GB DDR5 [OK]
+PING LOCALHOST -N 2 &gt;NUL
+ECHO [BOOT] RKZ SYSTEM READY
+PING LOCALHOST -N 4 &gt;NUL
+ECHO        TEST 1: WRITE/READ...</pre>
+
+      <pre class="sysinfo__sig"> _____   _  __  ______
+|  __ \ | |/ / |___  /
+| |__) || ' /     / / 
+|  _  / |  &lt;     / /  
+| | \ \ | . \   / /__ 
+|_|  \_\|_|\_\ /_____|</pre>
+      <span class="sysinfo__copy">(C)</span>
+
+    </footer>
+
+    <!-- Scanlines muy sutiles (no cubren la imagen derecha) -->
+    <div class="crt" aria-hidden="true"></div>
+
+  </div>
+
+</body>
+</html>
