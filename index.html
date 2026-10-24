@@ -21,14 +21,14 @@
       <span class="status__item status__item--5">PORT......3</span>
     </p>
 
-    <!-- Barra de navegación superior (la navegación se activa en la etapa 4) -->
+    <!-- Barra de navegación superior: enlaces con #hash, gestionados por js/main.js -->
     <nav class="topbar frame" aria-label="Navegación principal">
       <ul class="topbar__list">
-        <li class="topbar__item topbar__item--1"><button type="button" class="tab" aria-current="page">SUMMARY</button></li>
-        <li class="topbar__item topbar__item--2"><button type="button" class="tab">FIXED</button></li>
-        <li class="topbar__item topbar__item--3"><button type="button" class="tab">BOOT</button></li>
-        <li class="topbar__item topbar__item--4"><button type="button" class="tab">SEQ</button></li>
-        <li class="topbar__item topbar__item--5"><button type="button" class="tab">MORE+</button></li>
+        <li class="topbar__item topbar__item--1"><a class="tab" href="#summary" data-tab="summary" aria-current="page">SUMMARY</a></li>
+        <li class="topbar__item topbar__item--2"><a class="tab" href="#fixed" data-tab="fixed">FIXED</a></li>
+        <li class="topbar__item topbar__item--3"><a class="tab" href="#boot" data-tab="boot">BOOT</a></li>
+        <li class="topbar__item topbar__item--4"><a class="tab" href="#seq" data-tab="seq">SEQ</a></li>
+        <li class="topbar__item topbar__item--5"><a class="tab" href="#more" data-tab="more">MORE+</a></li>
       </ul>
     </nav>
 
@@ -36,7 +36,7 @@
     <main class="panel panel--content frame" id="contenido">
       <h1 class="sr-only">rkz</h1>
       <div class="screen" tabindex="0" role="region" aria-label="Contenido principal">
-
+        <section class="view" data-view="summary" data-tab="summary" data-title="SUMMARY">
         <pre class="term">@ECHO OFF
 MODE CON: COLS=80 LINES=30
 COLOR 0A
@@ -72,7 +72,75 @@ SET /P CHOICE=ENTER YOUR SELECTION (1-7): <span class="cursor" aria-hidden="true
           <p>Este párrafo es solo una prueba de lectura. Sirve para comprobar el tamaño del texto, el interlineado y el ancho de línea dentro del panel izquierdo. Será reemplazado cuando exista el sistema de publicaciones.</p>
           <p>Una segunda línea de prueba permite verificar cómo se comporta el ajuste de texto cuando el panel se estrecha en tabletas y móviles.</p>
         </article>
+        </section>
 
+        <section class="view" data-view="fixed" data-tab="fixed" data-title="FIXED" hidden>
+          <pre class="term">:: FIXED - VISTA PROVISIONAL
+ECHO ====================================
+ECHO CONTENIDO DE DEMOSTRACION - ETAPA 4
+ECHO ====================================</pre>
+          <article class="entry">
+            <h2 class="entry__title">Sección FIXED</h2>
+            <p>Espacio reservado para esta sección. Su contenido definitivo se decidirá más adelante; por ahora sirve para comprobar que la navegación cambia el panel izquierdo y deja intacta la imagen de la derecha.</p>
+          </article>
+        </section>
+
+        <section class="view" data-view="boot" data-tab="boot" data-title="BOOT" hidden>
+          <pre class="term">:: BOOT - VISTA PROVISIONAL
+ECHO ====================================
+ECHO CONTENIDO DE DEMOSTRACION - ETAPA 4
+ECHO ====================================</pre>
+          <article class="entry">
+            <h2 class="entry__title">Sección BOOT</h2>
+            <p>Espacio reservado para esta sección. El nombre de la pestaña es provisional y se puede cambiar en un solo sitio del HTML.</p>
+          </article>
+        </section>
+
+        <section class="view" data-view="seq" data-tab="seq" data-title="SEQ" hidden>
+          <pre class="term">:: SEQ - VISTA PROVISIONAL
+ECHO ====================================
+ECHO CONTENIDO DE DEMOSTRACION - ETAPA 4
+ECHO ====================================</pre>
+          <article class="entry">
+            <h2 class="entry__title">Sección SEQ</h2>
+            <p>Espacio reservado para esta sección. Puede usarse para un índice, un archivo cronológico u otro contenido que se defina después.</p>
+          </article>
+        </section>
+
+        <section class="view" data-view="more" data-tab="more" data-title="MORE+" hidden>
+          <pre class="term">:MENU
+ECHO MORE+ - SECCIONES EXTRA (PROVISIONAL)
+ECHO.</pre>
+          <ul class="menu">
+            <li><a class="menu__link" href="#more-about">[1] ACERCA DE</a></li>
+            <li><a class="menu__link" href="#more-links">[2] ENLACES</a></li>
+            <li><a class="menu__link" href="#summary">[3] VOLVER A SUMMARY</a></li>
+          </ul>
+        </section>
+
+        <section class="view" data-view="more-about" data-tab="more" data-title="ACERCA DE" hidden>
+          <pre class="term">:: MORE+ / ACERCA DE
+ECHO ====================================
+ECHO CONTENIDO DE DEMOSTRACION - ETAPA 4
+ECHO ====================================</pre>
+          <article class="entry">
+            <h2 class="entry__title">Acerca de</h2>
+            <p>Texto provisional. Aquí irá la presentación del sitio cuando decidas qué quieres contar.</p>
+          </article>
+          <p class="back"><a class="menu__link" href="#more">&lt; VOLVER</a></p>
+        </section>
+
+        <section class="view" data-view="more-links" data-tab="more" data-title="ENLACES" hidden>
+          <pre class="term">:: MORE+ / ENLACES
+ECHO ====================================
+ECHO CONTENIDO DE DEMOSTRACION - ETAPA 4
+ECHO ====================================</pre>
+          <article class="entry">
+            <h2 class="entry__title">Enlaces</h2>
+            <p>Texto provisional. Aquí irán los enlaces a perfiles externos cuando los indiques.</p>
+          </article>
+          <p class="back"><a class="menu__link" href="#more">&lt; VOLVER</a></p>
+        </section>
       </div>
     </main>
 
@@ -139,5 +207,6 @@ ECHO        TEST 1: WRITE/READ...</pre>
 
   </div>
 
+  <script src="js/main.js" defer></script>
 </body>
 </html>
