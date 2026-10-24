@@ -40,12 +40,7 @@
         <pre class="term">@ECHO OFF
 MODE CON: COLS=80 LINES=30
 COLOR 0A
-
-:: SETUP - VISTA SUMMARY (PROVISIONAL)
-ECHO ====================================
-ECHO RKZ MODULAR BIOS - SYSTEM UTILITY
-ECHO CONTENIDO DE DEMOSTRACION - ETAPA 2
-ECHO ====================================</pre>
+:: RKZ SETUP UTILITY - VERSION 0.1</pre>
 
         <pre class="art art--title" aria-hidden="true"> _____     _  __    ______
 |  __ \   | |/ /   |___  /
@@ -54,24 +49,17 @@ ECHO ====================================</pre>
 | | \ \   | . \     / /__ 
 |_|  \_\  |_|\_\   /_____|</pre>
 
-        <pre class="term">:MENU
-ECHO RKZ SETUP UTILITY - VERSION 0.1
-ECHO.
-ECHO [1] INDICE DE ENTRADAS
-ECHO [2] CATEGORIAS
-ECHO [3] ARCHIVO
-ECHO [4] ACERCA DE
-ECHO [5] ENLACES
-ECHO [6] ESTADO DEL SISTEMA
-ECHO [7] SALIR
-SET /P CHOICE=ENTER YOUR SELECTION (1-7): <span class="cursor" aria-hidden="true"></span></pre>
 
-        <article class="entry">
-          <h2 class="entry__title">Título de ejemplo</h2>
-          <p class="entry__meta">FECHA: 0000-00-00 | CATEGORIA: DEMO</p>
-          <p>Este párrafo es solo una prueba de lectura. Sirve para comprobar el tamaño del texto, el interlineado y el ancho de línea dentro del panel izquierdo. Será reemplazado cuando exista el sistema de publicaciones.</p>
-          <p>Una segunda línea de prueba permite verificar cómo se comporta el ajuste de texto cuando el panel se estrecha en tabletas y móviles.</p>
-        </article>
+        <section class="blog" aria-labelledby="blog-title">
+          <h2 class="blog__title" id="blog-title">ENTRADAS</h2>
+          <div id="post-list"></div>
+        </section>
+        </section>
+
+        <section class="view" data-view="post" data-tab="summary" data-title="ENTRADA" hidden>
+          <p class="back"><a class="menu__link" href="#summary">&lt; VOLVER AL INDICE</a></p>
+          <article class="entry" id="post-article"></article>
+          <p class="back"><a class="menu__link" href="#summary">&lt; VOLVER AL INDICE</a></p>
         </section>
 
         <section class="view" data-view="fixed" data-tab="fixed" data-title="FIXED" hidden>
@@ -208,5 +196,6 @@ ECHO        TEST 1: WRITE/READ...</pre>
   </div>
 
   <script src="js/main.js" defer></script>
+  <script src="js/posts.js" defer></script>
 </body>
 </html>

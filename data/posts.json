@@ -1,0 +1,46 @@
+{
+  "posts": [
+    {
+      "id": "entrada-de-demostracion",
+      "title": "Entrada de demostración",
+      "date": "2026-10-24",
+      "category": "DEMO",
+      "excerpt": "Texto de prueba para comprobar el índice y la lectura.",
+      "content": [
+        "Esta es una entrada de demostración. Sirve para comprobar el tamaño del texto, el interlineado y el ancho de línea dentro del panel izquierdo.",
+        "Los párrafos pueden incluir enlaces con esta sintaxis: [volver al índice](#summary) o [un sitio externo](https://example.com).",
+        "Cuando publiques tus propios textos, borra estas entradas de data/posts.json."
+      ]
+    },
+    {
+      "id": "como-anadir-entradas",
+      "title": "Cómo añadir entradas",
+      "date": "2026-10-23",
+      "category": "DEMO",
+      "excerpt": "Cada entrada es un objeto dentro de data/posts.json.",
+      "content": [
+        "Cada entrada es un objeto dentro de la lista \"posts\" del archivo data/posts.json. Los campos obligatorios son id, title, date y content.",
+        "El id debe ser único y sin espacios (por ejemplo, mi-primera-entrada): se usa en la dirección de la entrada. La fecha va en formato AAAA-MM-DD y las entradas se ordenan de la más reciente a la más antigua.",
+        "El campo content es una lista. Cada elemento de texto es un párrafo. Para insertar una imagen, usa un objeto con la ruta y un texto alternativo, por ejemplo: image, alt y caption (opcional).",
+        "Los campos category, excerpt y links son opcionales. En links se escribe una lista de objetos con label y url; aparecen al final de la entrada."
+      ],
+      "links": [
+        { "label": "Volver al índice", "url": "#summary" }
+      ]
+    },
+    {
+      "id": "prueba-de-lectura-larga",
+      "title": "Prueba de lectura larga",
+      "date": "2026-10-22",
+      "category": "PRUEBA",
+      "excerpt": "Varias líneas para comprobar el desplazamiento dentro del panel.",
+      "content": [
+        "Este texto existe solo para comprobar que el panel se desplaza cuando una entrada es más larga que el espacio disponible, y que el marco y la imagen de la derecha no se mueven.",
+        "Primer párrafo de relleno. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Segundo párrafo de relleno. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Tercer párrafo de relleno. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+        "Cuarto párrafo de relleno. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+      ]
+    }
+  ]
+}

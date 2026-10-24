@@ -1,7 +1,9 @@
 /* ==========================================================================
    rkz — navegación
    Cada vista del panel izquierdo es un <section data-view="nombre">.
-   La vista activa se guarda en el hash de la URL (#fixed, #more-about...),
+   La vista activa se guarda en el hash de la URL (#fixed, #more-about...).
+   Una ruta puede llevar un parámetro tras "/" (#post/mi-entrada): la parte
+   anterior elige la vista y el parámetro lo interpreta js/posts.js.
    de modo que funcionan los botones Atrás/Adelante, los enlaces directos y
    la recarga, sin recargar la página y sin tocar el panel de la imagen.
 
@@ -27,15 +29,17 @@
 
   var current = null;
 
-  function viewFromHash() {
-    var name = '';
-    try { name = decodeURIComponent(window.location.hash.slice(1)); } catch (e) { name = ''; }
-    return Object.prototype.hasOwnProperty.call(views, name) ? name : DEFAULT_VIEW;
+  function routeFromHash() {
+    var route = '';
+    try { route = decodeURIComponent(window.location.hash.slice(1)); } catch (e) { route = ''; }
+    var name = route.split('/')[0];
+    return Object.prototype.hasOwnProperty.call(views, name) ? route : DEFAULT_VIEW;
   }
 
-  function show(name) {
-    if (name === current) { return; }
-    current = name;
+  function show(route) {
+    if (route === current) { return; }
+    current = route;
+    var name = route.split('/')[0];
 
     Object.keys(views).forEach(function (key) {
       views[key].hidden = key !== name;
@@ -62,8 +66,8 @@
     view.classList.add('view--enter');
   }
 
-  window.addEventListener('hashchange', function () { show(viewFromHash()); });
-  show(viewFromHash());
+  window.addEventListener('hashchange', function () { show(routeFromHash()); });
+  show(routeFromHash());
 
   // Teclado en la barra: flechas / Inicio / Fin mueven el foco entre pestañas;
   // Enter activa el enlace enfocado.
