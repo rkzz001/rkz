@@ -129,7 +129,7 @@ body {
 /* --------------------------------------------------------------------------
    Paneles centrales
    -------------------------------------------------------------------------- */
-.panel--content { order: 4; min-height: 70vh; min-height: 70svh; }
+.panel--content { order: 4; min-height: max(70vh, 360px); min-height: max(70svh, 360px); }
 .panel--image {
   order: 3;
   padding: 8px 6px;
@@ -262,6 +262,13 @@ body {
   font-weight: 900;
   -webkit-text-stroke: 0.4px var(--accent);
   text-shadow: 0 0 6px rgba(79, 227, 186, 0.45);
+}
+
+/* Pantallas muy estrechas: que las etiquetas BANK no salten de línea */
+@media (max-width: 400px) {
+  .banks__row { gap: 4px 8px; }
+  .banks__name { width: 3.8em; font-size: 10px; }
+  .banks__tag { font-size: 10px; }
 }
 
 /* --------------------------------------------------------------------------
