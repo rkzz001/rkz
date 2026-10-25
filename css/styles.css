@@ -75,15 +75,18 @@ body {
 /* --------------------------------------------------------------------------
    Línea de estado
    -------------------------------------------------------------------------- */
+/* Móvil / pantallas bajas: 3 columnas x 2 filas, sin saltos de línea dentro de cada texto */
 .status {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2px 14px;
-  font-size: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-between;
+  gap: 2px 8px;
+  font-size: clamp(9.5px, 3.1vw, 12px);
   line-height: 1.3;
   color: var(--fg-mid);
   white-space: nowrap;
 }
+.status__item { min-width: 0; }
 
 /* --------------------------------------------------------------------------
    Barra superior
@@ -324,14 +327,19 @@ body {
     .stage { --size: min(100vw, 100svh); }
   }
 
-  /* Línea de estado: 5 segmentos con posición propia */
-  .status { display: block; font-size: calc(var(--u) * 14); }
-  .status__item { position: absolute; top: 1.85%; }
-  .status__item--1 { left: 3.80%; }
-  .status__item--2 { left: 20.65%; }
-  .status__item--3 { left: 55.16%; }
-  .status__item--4 { left: 68.34%; }
-  .status__item--5 { left: 84.78%; }
+  /* Línea de estado: los 6 textos se reparten con espacios iguales
+     (x 28-716 de la referencia). column-gap es el mínimo anti-solapamiento. */
+  .status {
+    position: absolute;
+    top: 1.85%;
+    left: 3.80%;
+    width: 93.50%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    column-gap: calc(var(--u) * 8);
+    font-size: calc(var(--u) * 14);
+  }
 
   /* Barra superior: x 23-715, y 47-83 */
   .topbar {
